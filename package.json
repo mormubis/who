@@ -1,0 +1,83 @@
+{
+  "author": "Adrian de la Rosa <adrian@delarosab.me>",
+  "dependencies": {
+    "eventemitter3": "^4.0.7"
+  },
+  "description": "Build forms in React as you do in HTML (with some 🍬!!!)",
+  "devDependencies": {
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
+    "@semantic-release/github": "^7.2.3",
+    "@semantic-release/npm": "^7.1.3",
+    "@testing-library/dom": "^8.2.0",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^12.0.0",
+    "@testing-library/user-event": "^13.2.1",
+    "@types/jest": "^27.0.1",
+    "@types/lodash": "^4.14.172",
+    "@types/react": "^17.0.19",
+    "@types/uuid": "^8.3.1",
+    "@typescript-eslint/eslint-plugin": "^4.30.0",
+    "@typescript-eslint/parser": "^4.30.0",
+    "esbuild": "^0.12.24",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-jest": "^24.4.0",
+    "eslint-plugin-jsdoc": "^36.0.8",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-react": "^7.25.1",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-sort-keys-fix": "^1.1.2",
+    "husky": "^7.0.2",
+    "jest": "^27.1.0",
+    "lint-staged": "^11.1.2",
+    "lodash": "^4.17.21",
+    "prettier": "^2.3.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "semantic-release": "^17.4.7",
+    "ts-jest": "^27.0.5",
+    "typescript": "^4.4.2"
+  },
+  "files": [
+    "dist",
+    "index.js",
+    "index.module.js"
+  ],
+  "keywords": [
+    "react",
+    "auth",
+    "authentication",
+    "who"
+  ],
+  "license": "MIT",
+  "main": "dist/index.js",
+  "module": "dist/index.module.js",
+  "name": "react-who",
+  "peerDependencies": {
+    "prop-types": "^15.7.2",
+    "react": "^16.9.0"
+  },
+  "repository": "mormubis/who",
+  "scripts": {
+    "build": "npm run build:cjs && npm run build:esm",
+    "build:ci": "tsc && npm run build",
+    "build:cjs": "esbuild ./src/index.ts --bundle --format=cjs --outfile=./dist/index.cjs.js",
+    "build:esm": "esbuild ./src/index.ts --bundle --format=esm --outfile=./dist/index.esm.js",
+    "format": "npm run format:ci -- --write",
+    "format:ci": "prettier --ignore-path .gitignore -l \"**/*.+(js|json|md|yml)\"",
+    "lint": "eslint \"src/**/*.{ts,tsx}\" --fix",
+    "lint:ci": "npm run lint -- --max-warnings 0",
+    "prepare": "npm run build && husky install",
+    "release": "semantic-release",
+    "start": "npm run test:watch",
+    "test": "jest --silent",
+    "test:ci": "npm run test -- --coverage",
+    "test:watch": "jest --watch",
+    "semantic-release": "semantic-release"
+  },
+  "version": "0.0.0-development"
+}

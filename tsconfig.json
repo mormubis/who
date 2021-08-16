@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "esModuleInterop": true,
+    "importHelpers": true,
+    "lib": ["dom", "ESNext"],
+    "moduleResolution": "node",
+    "noEmit": true,
+    "jsx": "react",
+    "module": "ESNext",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "strict": true,
+    "target": "ESNext",
+    "skipLibCheck": true
+  },
+  "include": ["src/**/*", "**/__tests__/**/*"]
+}
