@@ -3,7 +3,7 @@
   "dependencies": {
     "eventemitter3": "^4.0.7"
   },
-  "description": "Build forms in React as you do in HTML (with some 🍬!!!)",
+  "description": "Some description",
   "devDependencies": {
     "@commitlint/cli": "^13.1.0",
     "@commitlint/config-conventional": "^13.1.0",
