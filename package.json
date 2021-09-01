@@ -61,7 +61,6 @@
     "prop-types": "^15.7.2",
     "react": "^16.9.0"
   },
-  "repository": "mormubis/who",
   "scripts": {
     "build": "npm run build:cjs && npm run build:esm",
     "build:ci": "tsc && npm run build",
