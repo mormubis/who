@@ -3,7 +3,7 @@
   "dependencies": {
     "eventemitter3": "^4.0.7"
   },
-  "description": "Some description",
+  "description": "Another description",
   "devDependencies": {
     "@commitlint/cli": "^13.1.0",
     "@commitlint/config-conventional": "^13.1.0",
@@ -73,11 +73,11 @@
     "lint:ci": "npm run lint -- --max-warnings 0",
     "prepare": "npm run build && husky install",
     "release": "semantic-release",
+    "release:ci": "npm run release",
     "start": "npm run test:watch",
     "test": "jest --silent",
     "test:ci": "npm run test -- --coverage",
-    "test:watch": "jest --watch",
-    "semantic-release": "semantic-release"
+    "test:watch": "jest --watch"
   },
   "version": "0.0.0-development"
 }
