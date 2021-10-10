@@ -3,6 +3,7 @@
 
 # project
 /dist/
+/types/
 
 # test
 /coverage/

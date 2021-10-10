@@ -45,7 +45,8 @@
   "files": [
     "dist",
     "index.js",
-    "index.module.js"
+    "index.module.js",
+    "types"
   ],
   "keywords": [
     "react",
@@ -75,7 +76,10 @@
     "start": "npm run test:watch",
     "test": "jest --silent",
     "test:ci": "npm run test -- --coverage",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "types": "tsc",
+    "types:ci": "tsc"
   },
+  "types": "types/index.d.ts",
   "version": "0.0.0-development"
 }

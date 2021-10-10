@@ -1,19 +1,21 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
+    "declaration": true,
+    "emitDeclarationOnly": true,
     "esModuleInterop": true,
     "importHelpers": true,
-    "lib": ["dom", "ESNext"],
-    "moduleResolution": "node",
-    "noEmit": true,
     "jsx": "react",
+    "lib": ["dom", "ESNext"],
     "module": "ESNext",
+    "moduleResolution": "node",
+    "outDir": "types",
     "paths": {
       "@/*": ["src/*"]
     },
+    "skipLibCheck": true,
     "strict": true,
-    "target": "ESNext",
-    "skipLibCheck": true
+    "target": "ESNext"
   },
   "include": ["src/**/*", "**/__tests__/**/*"]
 }
