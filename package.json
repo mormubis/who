@@ -58,14 +58,13 @@
   "module": "dist/index.module.js",
   "name": "react-who",
   "peerDependencies": {
-    "prop-types": "^15.7.2",
-    "react": "^16.9.0"
+    "react": "^17.2.0"
   },
   "scripts": {
     "build": "npm run build:cjs && npm run build:esm",
     "build:ci": "tsc && npm run build",
-    "build:cjs": "esbuild ./src/index.ts --bundle --format=cjs --outfile=./dist/index.cjs.js",
-    "build:esm": "esbuild ./src/index.ts --bundle --format=esm --outfile=./dist/index.esm.js",
+    "build:cjs": "esbuild ./src/index.ts --bundle --external:react --external:react-dom --format=cjs --outfile=./dist/index.cjs.js",
+    "build:esm": "esbuild ./src/index.ts --bundle --external:react --external:react-dom --format=esm --outfile=./dist/index.esm.js",
     "format": "npm run format:ci -- --write",
     "format:ci": "prettier --ignore-path .gitignore -l \"**/*.+(js|json|md|yml)\"",
     "lint": "eslint \"src/**/*.{ts,tsx}\" --fix",
