@@ -5,7 +5,7 @@
   },
   "description": "Another description",
   "devDependencies": {
-    "@commitlint/cli": "^13.1.0",
+    "@commitlint/cli": "^17.0.1",
     "@commitlint/config-conventional": "^16.2.1",
     "@semantic-release/github": "^8.0.4",
     "@semantic-release/npm": "^9.0.1",
